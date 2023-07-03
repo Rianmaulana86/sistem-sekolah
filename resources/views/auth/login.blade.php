@@ -2,7 +2,7 @@
 @section('page', 'Login Authentication')
 @section('content')
 <div class="card-body login-card-body">
-  <p class="login-box-msg">LOGIN BRO</p>
+  <p class="login-box-msg">LOGIN SAT</p>
 
   <form action="{{ route('login') }}" method="post">
     @csrf

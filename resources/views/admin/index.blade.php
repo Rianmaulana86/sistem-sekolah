@@ -1,9 +1,9 @@
 @extends('template_backend.home')
 @section('heading', 'Dashboard')
-@section('page')
+{{-- @section('page')
   <li class="breadcrumb-item active">Admin</li>
   <li class="breadcrumb-item active">Dashboard</li>
-@endsection
+@endsection --}}
 @section('content')
     <div class="col-lg-4 col-6">
         <div class="small-box bg-info">

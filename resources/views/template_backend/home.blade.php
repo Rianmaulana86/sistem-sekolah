@@ -49,7 +49,7 @@
     <link rel="stylesheet" href="{{ asset('plugins/datatables-bs4/css/dataTables.bootstrap4.css') }}">
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-    <link rel="shrotcut icon" href="{{ asset('img/favicon.ico') }}">
+    <link rel="shrotcut icon" href="{{ asset('img/logo_AL.png') }}">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
     <style>
         .ctr {
@@ -100,16 +100,16 @@
     </style>
 </head>
 <!-- sidebar-collapse -->
-<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed sidebar-open">
+<body style="background: linear-gradient(45deg, rgba(223,240,234,1) 20%, rgba(63,187,192,1) 100%);" class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed sidebar-open">
 <div class="wrapper">
 
     @include('template_backend.navbar')
 
     @include('template_backend.sidebar')
 
-    <div class="content-wrapper">
+    <div style="background: none; margin-top:70px;" class="content-wrapper">
         <!-- Content Header (Page header) -->
-        <div class="content-header">
+        {{-- <div class="content-header">
         <div class="container-fluid">
             <div class="row mb-2">
             <div class="col-sm-6">
@@ -123,7 +123,7 @@
             </div><!-- /.col -->
             </div><!-- /.row -->
         </div><!-- /.container-fluid -->
-        </div>
+        </div> --}}
         <!-- /.content-header -->
         
         <!-- Main content -->

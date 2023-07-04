@@ -1,8 +1,8 @@
 @extends('layouts.app')
-@section('page', 'Register Authentication')
+@section('page', 'MA AL-KARIMIYAH')
 @section('content')
 <div class="card-body login-card-body">
-  <p class="login-box-msg">Register a new membership</p>
+  <p class="login-box-msg font-weight-bold">Register</p>
 
   <form action="{{ route('register') }}" method="post">
     @csrf
@@ -71,7 +71,7 @@
       </div>
       <!-- /.col -->
       <div class="col-6 justify-content-end">
-        <button type="submit" class="btn btn-primary btn-block">{{ __('Register') }} &nbsp; <i class="nav-icon fas fa-sign-in-alt"></i></button>
+        <button style="background-color: #3fbbc0" type="submit" class="btn text-white btn-block">{{ __('Register') }} &nbsp; <i class="nav-icon fas fa-sign-in-alt"></i></button>
       </div>
       <!-- /.col -->
     </div>

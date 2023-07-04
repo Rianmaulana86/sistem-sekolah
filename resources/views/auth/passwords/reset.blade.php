@@ -1,8 +1,8 @@
 @extends('layouts.app')
-@section('page', 'Reset Password')
+@section('page', 'MA AL-KARIMIYAH')
 @section('content')
 <div class="card-body login-card-body">
-  <p class="login-box-msg">You are only one step a way from your new password, recover your password now.</p>
+  <p class="login-box-msg font-weight-bold">RESET PASSWORD</p>
 
   <form action="{{ route('reset.password.update', $user->id) }}" method="post">
     @csrf
@@ -51,7 +51,7 @@
     </div>
     <div class="row mb-2">
       <div class="col-12">
-        <button type="submit" class="btn btn-primary btn-block">{{ __('Reset Password') }}</button>
+        <button style="background-color: #3fbbc0" type="submit" class="btn text-white btn-block">{{ __('Reset Password') }}</button>
       </div>
       <!-- /.col -->
     </div>

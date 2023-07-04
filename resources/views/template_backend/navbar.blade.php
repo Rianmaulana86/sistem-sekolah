@@ -1,5 +1,9 @@
 <!-- Navbar -->
-<nav class="main-header navbar navbar-expand navbar-white navbar-light" style="background-color: #0f4c81;">
+<nav class="main-header navbar navbar-expand navbar-white navbar-light" style="background: rgba(63, 187, 192, 0.48);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(13px);
+-webkit-backdrop-filter: blur(13px);
+border: 1px solid rgba(63, 187, 192, 0.2);">
 <!-- Left navbar links -->
     <ul class="navbar-nav">
         <li class="nav-item">

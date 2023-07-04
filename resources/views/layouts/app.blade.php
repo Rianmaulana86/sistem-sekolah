@@ -9,12 +9,12 @@
   <link rel="stylesheet" href="{{ asset('plugins/icheck-bootstrap/icheck-bootstrap.min.css') }}">
   <link rel="stylesheet" href="{{ asset('plugins/toastr/toastr.min.css') }}">
   <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css') }}">
-  <link rel="shrotcut icon" href="{{ asset('img/favicon.ico') }}">
+  <link rel="shrotcut icon" href="{{ asset('img/logo_AL.png') }}">
 </head>
-<body class="hold-transition login-page" style="background-image: url('{{ asset("img/wallup.jpg") }}'); background-size: cover; background-attachment: fixed;">
+<body class="hold-transition login-page" style="background-color:#3fbbc0">
   <div class="login-box">
     <div class="login-logo">
-      <img src="{{ asset('img/logosiakad.png') }}" width="100%" alt="">
+      <img src="{{ asset('img/logo_AL.png') }}" width="50%" alt="">
     </div>
 
     <div class="login-logo" style="color: white;">
@@ -25,11 +25,7 @@
       @yield('content')
     </div>
 
-    <footer style="color: white;">
-      <marquee>
-          <strong>Copyright &copy; <script>document.write(new Date().getFullYear());</script> &diams; <a href="http://smkn1jenpo.sch.id/" style="color: white;">SMK Negeri 1 Jenangan Ponorogo</a>. </strong>
-      </marquee>
-    </footer>
+    
   </div>
 
 <!-- jQuery -->

@@ -1,8 +1,8 @@
 @extends('layouts.app')
-@section('page', 'Reset Password')
+@section('page', 'MA AL-KARIMIYAH')
 @section('content')
 <div class="card-body login-card-body">
-  <p class="login-box-msg">You forgot your password? Here you can easily retrieve a new password.</p>
+  <p class="login-box-msg font-weight-bold">RESET PASSWORD</p>
 
   <form action="{{ route('cek-email') }}" method="post">
     @csrf
@@ -21,7 +21,7 @@
     </div>
     <div class="row mb-3">
       <div class="col-12">
-        <button type="submit" class="btn btn-primary btn-block">{{ __('Send Password Reset Link') }}</button>
+        <button style="background-color: #3fbbc0" type="submit" class="btn text-white btn-block">{{ __('Send Password Reset Link') }}</button>
       </div>
       <!-- /.col -->
     </div>

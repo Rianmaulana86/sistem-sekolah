@@ -1,8 +1,8 @@
 @extends('layouts.app')
-@section('page', 'Login Authentication')
+@section('page', 'MA AL-KARIMIYAH')
 @section('content')
 <div class="card-body login-card-body">
-  <p class="login-box-msg">LOGIN SAT</p>
+  <p class="login-box-msg font-weight-bold">LOGIN</p>
 
   <form action="{{ route('login') }}" method="post">
     @csrf
@@ -43,22 +43,24 @@
       </div>
       <!-- /.col -->
       <div class="col-5">
-        <button type="submit" id="btn-login"class="btn btn-primary btn-block" disabled>{{ __('Login') }} &nbsp; <i class="nav-icon fas fa-sign-in-alt"></i></button>
+        <button style="background-color: #3fbbc0" type="submit" id="btn-login"class="btn btn-block text-white" disabled>{{ __('Login') }} &nbsp; <i class="nav-icon fas fa-sign-in-alt"></i></button>
       </div>
       <!-- /.col -->
     </div>
   </form>
 
-  <p class="mb-1">
-    @if (Route::has('password.request'))
-      <a class="text-center" href="{{ route('password.request') }}">
+  {{-- <div class="d-flex justify-content-around mt-3">
+    <p class="mb-1">
+      @if (Route::has('password.request'))
+      <a class="text-center btn btn-light text-blue" href="{{ route('password.request') }}">
         {{ __('Lupa Password?') }}
       </a>
     @endif
   </p>
   <p class="mb-0">
-    <a class="text-center" href="{{ route('register') }}">Buat Akun Baru</a>
+    <a class="text-center btn btn-light text-blue" href="{{ route('register') }}">Buat Akun Baru</a>
   </p>
+</div> --}}
 </div>
 @endsection
 @section('script')

@@ -173,12 +173,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a href="{{ route('admin.pengumuman') }}" class="nav-link" id="Pengumuman">
-                            <i class="nav-icon fas fa-clipboard"></i>
-                            <p>Pengumuman</p>
-                        </a>
-                    </li>
+                 
                 @elseif (Auth::user()->role == 'Guru' && Auth::user()->guru(Auth::user()->id_card))
                     <li class="nav-item has-treeview">
                         <a href="{{ url('/') }}" class="nav-link" id="Home">

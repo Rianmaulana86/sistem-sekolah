@@ -81,18 +81,21 @@
                     <th>NIS</th>
                     <th>Nama Siswa</th>
                     <th>Jenis Kelamin</th>
+                    <th>Kelas</th>
                     <th>Aksi</th>
                 </tr>
             </thead>
             <tbody>
+               
                 @foreach ($siswa as $data)
                     <tr>
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $data->nis }}</td>
                         <td>{{ $data->nama_siswa }}</td>
                         <td>{{ $data->jk }}</td>
+                        <td>{{ App\Kelas::find($data->kelas_id)->nama_kelas }}</td>
                         <td>
-                            <a href="{{ route('siswa.kelas', Crypt::encrypt($data->id)) }}" class="btn btn-info btn-sm"><i class="nav-icon fas fa-search-plus"></i> &nbsp; Ditails</a>
+                            <a href="{{ route('siswa.kelas', Crypt::encrypt($data->kelas_id)) }}" class="btn btn-info btn-sm"><i class="nav-icon fas fa-search-plus"></i> &nbsp; Details Siswa Per Kelas</a>
                         </td>
                     </tr>
                 @endforeach

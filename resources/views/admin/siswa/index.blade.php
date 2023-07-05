@@ -78,15 +78,19 @@
             <thead>
                 <tr>
                     <th>No.</th>
-                    <th>Kelas</th>
+                    <th>NIS</th>
+                    <th>Nama Siswa</th>
+                    <th>Jenis Kelamin</th>
                     <th>Aksi</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach ($kelas as $data)
+                @foreach ($siswa as $data)
                     <tr>
                         <td>{{ $loop->iteration }}</td>
-                        <td>{{ $data->nama_kelas }}</td>
+                        <td>{{ $data->nis }}</td>
+                        <td>{{ $data->nama_siswa }}</td>
+                        <td>{{ $data->jk }}</td>
                         <td>
                             <a href="{{ route('siswa.kelas', Crypt::encrypt($data->id)) }}" class="btn btn-info btn-sm"><i class="nav-icon fas fa-search-plus"></i> &nbsp; Ditails</a>
                         </td>

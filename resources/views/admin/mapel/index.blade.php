@@ -35,7 +35,15 @@
                     @else
                       <td>{{ $data->paket->ket }}</td>
                     @endif
-                    <td>{{ $data->kelompok }}</td>
+                    <td>@if ( $data->kelompok == 'A')
+                          {{ "Pelajaran Umum" }}
+                        @elseif($data->kelompok == 'B')
+                        {{ "Pelajaran Khusus" }}
+                        @elseif($data->kelompok == 'C')
+                        {{ "Pelajaran Keahlian" }}
+                    @endif
+                  </td>
+                    {{-- {{ $data->kelompok }} --}}
                     <td>
                         <form action="{{ route('mapel.destroy', $data->id) }}" method="post">
                             @csrf

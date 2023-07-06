@@ -12,15 +12,16 @@
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 @if (Auth::user()->role == 'Admin' || Auth::user()->role == 'Operator')
-                    <li class="nav-item has-treeview" id="liDashboard">
-                        <a href="#" class="nav-link" id="Dashboard">
+                    <li class="nav-item has-treeview" >
+                        {{-- id="liDashboard" --}}
+                        <a href="{{ route('admin.home') }}" class="nav-link" id="Dashboard">
                             <i class="nav-icon fas fa-home"></i>
                             <p>
                                 Dashboard
-                                <i class="fas fa-angle-left right"></i>
+                                {{-- <i class="fas fa-angle-left right"></i> --}}
                             </p>
                         </a>
-                        <ul class="nav nav-treeview ml-4">
+                        {{-- <ul class="nav nav-treeview ml-4">
                             <li class="nav-item">
                                 <a href="{{ url('/') }}" class="nav-link" id="Home">
                                     <i class="fas fa-home nav-icon"></i>
@@ -33,7 +34,7 @@
                                     <p>Dashboard Admin</p>
                                 </a>
                             </li>
-                        </ul>
+                        </ul> --}}
                     </li>
                     <li class="nav-item has-treeview" id="liMasterData">
                         <a href="#" class="nav-link" id="MasterData">
@@ -132,7 +133,7 @@
                         </li>
                     @else
                     @endif
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a href="{{ route('guru.absensi') }}" class="nav-link" id="AbsensiGuru">
                             <i class="fas fa-calendar-check nav-icon"></i>
                             <p>Absensi Guru</p>
@@ -172,7 +173,7 @@
                                 </a>
                             </li>
                         </ul>
-                    </li>
+                    </li> --}}
                  
                 @elseif (Auth::user()->role == 'Guru' && Auth::user()->guru(Auth::user()->id_card))
                     <li class="nav-item has-treeview">

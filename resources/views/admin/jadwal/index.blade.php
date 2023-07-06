@@ -81,15 +81,27 @@
             <thead>
                 <tr>
                     <th>No.</th>
-                    <th>Nama Kelas</th>
+                    <th>Hari</th>
+                    <th>Kelas</th>
+                    <th>Kode Mapel</th>
                     <th>Lihat Jadwal</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach ($kelas as $data)
+              
+                @foreach ($jadwal as $data)
                   <tr>
                     <td>{{ $loop->iteration }}</td>
-                    <td>{{ $data->nama_kelas }}</td>
+                    <td>
+                      @if ($data->hari_id == 1) {{ "Senin" }}  
+                      @elseif($data->hari_id == 2) {{ "Selasa" }}
+                      @elseif($data->hari_id == 3) {{ "Rabu" }}
+                      @elseif($data->hari_id == 4) {{ "Kamis" }}
+                      @elseif($data->hari_id == 5) {{ "Jumat" }}
+                      @endif
+                    </td>
+                    <td>{{ $data->kelas_id }}</td>
+                    <td>{{ $data->mapel_id }}</td>
                     <td>
                       <a href="{{ route('jadwal.show', Crypt::encrypt($data->id)) }}" class="btn btn-info btn-sm"><i class="nav-icon fas fa-search-plus"></i> &nbsp; Ditails</a>
                     </td>

@@ -78,7 +78,7 @@
             <thead>
                 <tr>
                     <th>No.</th>
-                    <th>NIS</th>
+                    <th>No Induk</th>
                     <th>Nama Siswa</th>
                     <th>Jenis Kelamin</th>
                     <th>Kelas</th>
@@ -90,9 +90,13 @@
                 @foreach ($siswa as $data)
                     <tr>
                         <td>{{ $loop->iteration }}</td>
-                        <td>{{ $data->nis }}</td>
+                        <td>{{ $data->no_induk }}</td>
                         <td>{{ $data->nama_siswa }}</td>
-                        <td>{{ $data->jk }}</td>
+                        <td>
+                            @if($data->jk == 'P') {{ "Perempuan" }}
+                            @elseif($data->jk == 'L') {{ "Laki-laki" }}
+                            @endif
+                        </td>
                         <td>{{ App\Kelas::find($data->kelas_id)->nama_kelas }}</td>
                         <td>
                             <a href="{{ route('siswa.kelas', Crypt::encrypt($data->kelas_id)) }}" class="btn btn-info btn-sm"><i class="nav-icon fas fa-search-plus"></i> &nbsp; Details Siswa Per Kelas</a>

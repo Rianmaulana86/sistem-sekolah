@@ -28,8 +28,9 @@ class GuruController extends Controller
     public function index()
     {
         $mapel = Mapel::orderBy('nama_mapel')->get();
+        $guru = Guru::orderBy('nama_guru')->get();
         $max = Guru::max('id_card');
-        return view('admin.guru.index', compact('mapel', 'max'));
+        return view('admin.guru.index', compact('mapel', 'max','guru'));
     }
 
     /**

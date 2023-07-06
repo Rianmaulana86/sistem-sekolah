@@ -69,9 +69,7 @@
 
         <div class="card-footer">
           <a href="#" name="kembali" class="btn btn-default" id="back"><i class='nav-icon fas fa-arrow-left'></i> &nbsp; Kembali</a> &nbsp;
-          
-            <a href="{{ url('/mapel') }}" name="submit" class="btn btn-success"><i class="nav-icon fas fa-save"></i> &nbsp; Edit</a>
-          
+          <button name="submit" class="btn btn-success"><i class="nav-icon fas fa-save"></i> &nbsp; Edit</button>
         </div>
       </form>
     </div>

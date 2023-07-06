@@ -78,15 +78,22 @@
             <thead>
                 <tr>
                     <th>No.</th>
-                    <th>Nama Mapel</th>
-                    <th>Lihat Guru</th>
+                    <th>NIP</th>
+                    <th>Nama Guru</th>
+                    <th>Jenis Kelamin</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach ($mapel as $data)
+                @foreach ($guru as $data)
                     <tr>
                         <td>{{ $loop->iteration }}</td>
-                        <td>{{ $data->nama_mapel }}</td>
+                        <td>{{ $data->nip }}</td>
+                        <td>{{ $data->nama_guru }}</td>
+                        <td>
+                            @if ($data->jk == 'L') {{ "Laki-Laki" }}
+                            @elseif ( $data->jk == 'P' ) {{ "Perempuan" }}
+                            @endif
+                        </td>
                         <td>
                             <a href="{{ route('guru.mapel', Crypt::encrypt($data->id)) }}" class="btn btn-info btn-sm"><i class="nav-icon fas fa-search-plus"></i> &nbsp; Ditails</a>
                         </td>

@@ -34,7 +34,8 @@ Route::get('/reset/password/{id}', 'UserController@password')->name('reset.passw
 Route::patch('/reset/password/update/{id}', 'UserController@update_password')->name('reset.password.update')->middleware('guest');
 
 Route::middleware(['auth'])->group(function () {
-  Route::get('/', 'HomeController@index')->name('home');
+  Route::get('/', 'HomeController@admin')->name('home');
+  // Route::get('/', 'HomeController@index')->name('home');
   Route::get('/home', 'HomeController@index')->name('home');
   Route::get('/jadwal/sekarang', 'JadwalController@jadwalSekarang');
   Route::get('/profile', 'UserController@profile')->name('profile');
